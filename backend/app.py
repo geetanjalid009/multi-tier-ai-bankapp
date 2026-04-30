@@ -4,6 +4,13 @@ import psycopg2
 
 app = Flask(__name__)
 
+@app.route("/")
+def home():
+    return jsonify({
+        "message": "Multi-Tier AI BankApp Backend is Running",
+        "routes": ["/health", "/accounts", "/ai-chat"]
+    })
+
 DB_HOST = os.getenv("DB_HOST", "db")
 DB_NAME = os.getenv("DB_NAME", "bankdb")
 DB_USER = os.getenv("DB_USER", "bankuser")
