@@ -38,6 +38,16 @@ services:
       timeout: 5s
       retries: 5
 
+  frontend:
+    build: ./frontend
+    container_name: bank-frontend-ui
+    ports:
+      - "8080:80"
+    depends_on:
+      - backend
+    networks:
+      - bank-network
+
 volumes:
   bank-db-data:
 

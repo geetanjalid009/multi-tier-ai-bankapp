@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AI BankApp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>AI-Powered Banking Dashboard</h1>
+        <p class="subtitle">Multi-Tier Dockerized Application</p>
+
+        <section>
+            <h2>Account Details</h2>
+            <button onclick="loadAccounts()">Load Accounts</button>
+            <div id="accounts"></div>
+        </section>
+
+        <section>
+            <h2>AI Banking Assistant</h2>
+            <input type="text" id="message" placeholder="Ask about your account...">
+            <button onclick="askAI()">Ask AI</button>
+            <div id="aiResponse"></div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
